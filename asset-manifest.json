@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Pro-Wrestling-Manager/static/css/main.44d41d08.css",
+    "main.js": "/Pro-Wrestling-Manager/static/js/main.3de36d15.js",
+    "index.html": "/Pro-Wrestling-Manager/index.html",
+    "main.44d41d08.css.map": "/Pro-Wrestling-Manager/static/css/main.44d41d08.css.map",
+    "main.3de36d15.js.map": "/Pro-Wrestling-Manager/static/js/main.3de36d15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44d41d08.css",
+    "static/js/main.3de36d15.js"
+  ]
+}
