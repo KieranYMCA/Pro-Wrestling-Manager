@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const name = prompt("Enter save name:");
       if (name) {
         GameState.currentSaveName = name;
+        TitleSystem.init();
         SaveSystem.save();
-        alert('Game started! (Dashboard and systems coming next)');
+        loadDashboard();
       }
     };
 
@@ -30,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.textContent = name;
         btn.onclick = () => {
           SaveSystem.load(name);
-          alert('Game loaded! (Dashboard and systems coming next)');
+          TitleSystem.init();
+          loadDashboard();
         };
         list.appendChild(btn);
       });
