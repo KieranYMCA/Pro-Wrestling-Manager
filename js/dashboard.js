@@ -1,5 +1,5 @@
 
-function loadDashboard() {
+window.loadDashboard = function () {
   const app = document.getElementById("app");
   app.innerHTML = `
     <div class="dashboard">
@@ -9,9 +9,10 @@ function loadDashboard() {
       <p><strong>Popularity:</strong> ${GameState.company.popularity}%</p>
       <p><strong>Momentum:</strong> ${GameState.company.momentum}</p>
       <p><strong>Prestige:</strong> ${GameState.company.prestige}</p>
-      <button onclick="startBooking()">Book Show</button>
-      <button onclick="SaveSystem.save()">Save Game</button>
-      <button onclick="location.reload()">Exit to Menu</button>
+      <p><strong>Champions:</strong><br><pre>${TitleSystem.getTitleInfo()}</pre></p>
+      <button onclick="startBooking()">📅 Book Show</button>
+      <button onclick="SaveSystem.save()">💾 Save Game</button>
+      <button onclick="location.reload()">⏏ Exit to Menu</button>
     </div>
   `;
-}
+};
