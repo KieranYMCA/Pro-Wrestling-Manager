@@ -1,10 +1,19 @@
 
-// For now, this just seeds a fake roster when new game is created
 (function seedDefaultRoster() {
   if (GameState.roster.length === 0) {
     GameState.roster = [
-      "Ronan Reignz", "Colby Roads", "Zeph Rawlins", "Reba Wrath",
-      "Brock Boulder", "Jimmy Ooze", "Jay Ooze", "Braydn Wyatt"
+      { name: "Ronan Reignz", popularity: 90, alignment: "Face", morale: 80 },
+      { name: "Colby Roads", popularity: 85, alignment: "Face", morale: 70 },
+      { name: "Zeph Rawlins", popularity: 88, alignment: "Heel", morale: 75 },
+      { name: "Reba Wrath", popularity: 92, alignment: "Heel", morale: 85 },
+      { name: "Brock Boulder", popularity: 78, alignment: "Tweener", morale: 65 },
+      { name: "Jimmy Ooze", popularity: 80, alignment: "Heel", morale: 68 },
+      { name: "Jay Ooze", popularity: 77, alignment: "Heel", morale: 66 },
+      { name: "Braydn Wyatt", popularity: 74, alignment: "Face", morale: 70 }
     ];
   }
 })();
+
+function getWorkerNames() {
+  return GameState.roster.map(w => w.name);
+}
